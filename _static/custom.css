@@ -1,0 +1,10 @@
+/* Affiner la lisibilité et les formules */
+.wy-nav-content { max-width: 1200px; }
+.math { font-size: 105%; }
+
+.cc-by-footer {
+  margin-top: 1em;
+  font-size: 90%;
+  text-align: right;
+  color: #666;
+}
