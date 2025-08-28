@@ -2,8 +2,8 @@ import os
 import sys
 from datetime import date
 
-project = "Théorie des Horloges Cosmologiques"
-author = "Lionel Orcil"
+project = "CosmoBEWI"
+author = "Lionel Orcil — Édité et diffusé par IOBEWI"
 copyright = f"{date.today().year}, {author}"
 
 sys.path.insert(0, os.path.abspath(".."))
