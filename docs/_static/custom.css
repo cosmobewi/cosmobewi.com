@@ -406,13 +406,27 @@ a:focus, input:focus, button:focus{
   border-color: var(--content-border);
 }
 
-/* 5) Un peu plus de marge sur petits écrans */
+/* 1) Mobile : adoucir la “carte” et éviter les débords */
 @media (max-width: 980px){
   .wy-nav-content{
     border-radius: 10px;
     padding: 18px 16px;
     box-shadow: 0 6px 18px rgba(0,0,0,.22);
   }
+}
+
+/* 2) Impression : fond neutre et texte lisible */
+@media print{
+  html, body,
+  .wy-body-for-nav,
+  .wy-grid-for-nav,
+  .wy-nav-content-wrap{ background:#fff !important; }
+  .wy-nav-content{
+    background:#fff !important;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  .rst-content, .rst-content p, .rst-content li{ color:#111 !important; }
 }
 
 /* (Optionnel) Si tu veux vraiment très léger : remonte la luminosité d’un cran */
@@ -424,7 +438,6 @@ a:focus, input:focus, button:focus{
 
 
 /* ===== Fix Firefox/RTD : fond blanc ===== */
-:root{ color-scheme: dark; } /* harmonise scrollbars/inputs en dark */
 
 html, body{
   background: var(--bg) !important;
