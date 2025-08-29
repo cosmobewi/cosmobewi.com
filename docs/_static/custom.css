@@ -78,7 +78,7 @@
   --btn-fs:16px;
 
   /* Z-index */
-  --z-floating:9000;
+  --z-floating:500;
 }
 
 /* ------------------ Fond global & container -------------- */
@@ -428,6 +428,23 @@ a:focus, input:focus, button:focus{
   }
   .rst-content, .rst-content p, .rst-content li{ color:#111 !important; }
 }
+
+
+/* --- RTD mobile top bar (remplace le bleu) --- */
+.wy-nav-top{
+  background: var(--side) !important;            /* ex: #1a1a1d */
+  color: var(--side-text) !important;            /* ex: #e5e7eb */
+  border-bottom: 1px solid var(--side-border) !important;
+  box-shadow: none !important;
+}
+.wy-nav-top a,
+.wy-nav-top a:visited,
+.wy-nav-top .icon,
+.wy-nav-top i{
+  color: var(--side-text-strong) !important;     /* ex: #fff */
+  text-decoration: none !important;
+}
+
 
 /* (Optionnel) Si tu veux vraiment très léger : remonte la luminosité d’un cran */
 :root.light-dark{
