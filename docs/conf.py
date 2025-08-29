@@ -58,3 +58,10 @@ rst_prolog = r"""
 """
 
 todo_include_todos = True
+
+html_context = {
+    "display_github": True,
+    "github_user": "cosmobewi",
+    "github_repo": "cosmobewi.com",
+    "github_version": "main/docs/",
+}
