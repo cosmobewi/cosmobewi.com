@@ -108,7 +108,7 @@ To enable automatic rebuilds and preview in a browser:
 
 ```bash
 # Inside the container
-sphinx-autobuild portal _build/html --host 0.0.0.0 --port 8000
+sphinx-autobuild . _build/html --host 0.0.0.0 --port 8000
 ```
 
 Then open:

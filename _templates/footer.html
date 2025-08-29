@@ -2,16 +2,41 @@
 
 {% block contentinfo %}
   {{ super() }}
+  <!-- ========== HTML : bouton + popup Tipeee ========== -->
+  <script async src="https://plugin.tipeee.com/widget.js" charset="utf-8"></script>
+
+  <div class="tipeeechat-container-wrap" aria-live="polite">
+      <a href="https://fr.tipeee.com/cosmobewi" 
+        class="tipeee-project-cart-simple tipeeechat-button" 
+        data-orientation="line" data-rewards="0"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Soutenir CosmoBEWI sur Tipeee">
+        <img src="https://fr.tipeee.com/_static/promo-kit/logos/png/tipeee_tip_btn.png"
+              alt="Tipeee" width="80" height="22" style="display:block"/>
+        <span>Soutener nous</span>
+      </a>
+  </div>
+  <div class="kofi-footer">
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('cosmobewi', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support us',
+        'floating-chat.donateButton.background-color': '#323842',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    </script>
+  </div>
   <div class="cc-by-footer">
-   « {{ project }} », <strong>{{ copyright }}</strong> 
-   <br/>
+    « {{ project }} », <strong>{{ copyright }}</strong> 
+    <br/>
     publiée sous licence
     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
     <br/>
     <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
       <img alt="CC BY 4.0"
-           src="https://licensebuttons.net/l/by/4.0/88x31.png"
-           style="border-width:0" />
+          src="https://licensebuttons.net/l/by/4.0/88x31.png"
+          style="border-width:0" />
     </a><br/>
   </div>
 {% endblock %}
