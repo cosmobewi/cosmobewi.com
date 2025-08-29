@@ -421,3 +421,35 @@ a:focus, input:focus, button:focus{
   --content-border:#2a3440;
   --content-shadow: 0 8px 28px rgba(0,0,0,.25);
 }
+
+
+/* ===== Fix Firefox/RTD : fond blanc ===== */
+:root{ color-scheme: dark; } /* harmonise scrollbars/inputs en dark */
+
+html, body{
+  background: var(--bg) !important;
+}
+
+/* Couches RTD qui réimposent un fond clair */
+.wy-body-for-nav,
+.wy-grid-for-nav,
+.wy-nav-content-wrap{
+  background: var(--bg) !important;
+  background-image: none !important;   /* au cas où le thème ajoute un dégradé */
+  min-height: 100vh;                   /* évite la “marche” blanche en bas */
+}
+
+/* Ta carte de contenu reste sur sa surface */
+.wy-nav-content{
+  background: var(--content-bg) !important;
+  border: 1px solid var(--content-border);
+  border-radius: var(--content-radius);
+  padding: var(--content-padding-y) var(--content-padding-x);
+  box-shadow: var(--content-shadow);
+}
+
+/* Optionnel : sécuriser aussi quand RTD met des wrappers internes */
+.wy-nav-content .rst-content,
+.document{
+  background: transparent !important;
+}
