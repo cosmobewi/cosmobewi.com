@@ -1,4 +1,4 @@
-# Devcontainer for CLASS (xi_interact patch) + Cobaya + GetDist (+ MontePython optional)
+# Devcontainer for SPHINX
 FROM python:3.12-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
