@@ -22,7 +22,13 @@ jobs:
         with:
           submodules: recursive     # ← important
           fetch-depth: 0
-
+      
+      - name: Sync & update submodules to tracked branches
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive --remote
+          git submodule foreach 'git status --porcelain -b || true'
+          
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
