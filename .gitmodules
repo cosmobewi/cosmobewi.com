@@ -2,3 +2,7 @@
 	path = docs/cosmobewi-shared
 	url = https://github.com/cosmobewi/cosmobewi-sphinx-shared.git
 	branch = main
+[submodule "pdv-to-lambda"]
+	path = pdv-to-lambda
+	url = https://github.com/cosmobewi/pdv-to-lambda.git
+	branch = main
